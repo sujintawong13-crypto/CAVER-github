@@ -1,15 +1,27 @@
 ## Dataset Field Descriptions
 
-- `Source`: Origin database or platform of the entry.
-- `Citing Article DOI`: DOI of the paper citing the reference.
-- `Citing Article Title`: Title of the citing paper.
-- `Domain`: Academic discipline/field of study.
-- `Statement with Citation`: Specific sentence containing the in-text citation tag.
-- `Reference Article DOI`: DOI of the cited paper.
-- `Reference Article Title`: Title of the cited paper.
-- `Reference Article Abstract`: Abstract of the cited paper.
-- `Reference Article PDF Available`: Availability of the reference paper's full PDF (`Yes`/`No`).
-- `Label`: Annotation on citation accuracy/relevance (e.g., `Fully substantiate`).
-- `Explanation`: Reason justifying the given label (e.g., `Irrelevant`).
-- `dowloadPDF`: Boolean flag indicating whether the PDF was downloaded (`TRUE`/`FALSE`).
-- `PubPeer`: URL linking to related discussion or reference documents.
+- `Source`: Source from which the citation pair was collected (e.g., `PubPeer`, `Smith & Cumberledge, 2020`).
+
+- `Citing Article DOI`: Digital Object Identifier (DOI) of the article containing the citation statement.
+
+- `Citing Article Title`: Full title of the article that cites another publication.
+
+- `Domain`: Academic discipline of the citing article (e.g., `Physics`, `Biology`, `Medicine`, `Computer Science`).
+
+- `Statement with Citation`: Citation-containing statement extracted from the citing article. The original citation marker is replaced with a placeholder (e.g., `[citation]`, `[citation 49]`).
+
+- `Reference Article DOI`: DOI of the cited (reference) article.
+
+- `Reference Article Title`: Full title of the cited article.
+
+- `Reference Article Abstract`: Abstract of the cited article, used as supporting evidence for citation verification.
+
+- `Label`: Ground-truth citation verification label.
+  - `Fully Substantiated`: The cited article fully supports the citation statement.
+  - `Unsubstantiated`: The cited article does not sufficiently support the citation statement.
+
+- `PDF`: URL to the full-text PDF of the cited article (or another accessible copy) used during the verification process.
+
+- `Explanation`: A natural-language rationale explaining the annotation decision. It summarizes the relationship between the citation statement and the cited article, highlighting whether and why the evidence supports the claim.
+
+- `Evidence`: The evidence passage extracted from the cited article that justifies the annotation. This is typically a verbatim excerpt from the article's abstract, results, discussion, or other relevant sections used for citation verification.
