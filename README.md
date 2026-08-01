@@ -17,8 +17,8 @@
 - `Reference Article Abstract`: Abstract of the cited article, used as supporting evidence for citation verification.
 
 - `Label`: Ground-truth citation verification label.
-  - `Fully Substantiated`: The cited article fully supports the citation statement.
-  - `Unsubstantiated`: The cited article does not sufficiently support the citation statement.
+  - `Fully Substantiated`: The cited statement is genuinely supported by the referenced article, either verbatim, semantically equivalent, or partially aligned with the reported findings.
+  - `Unsubstantiated`: The cited statement is not supported by the referenced article. This category includes misleading interpretations of the source as well as citations to articles containing no relevant supporting evidence.
 
 - `PDF`: URL to the full-text PDF of the cited article (or another accessible copy) used during the verification process.
 
